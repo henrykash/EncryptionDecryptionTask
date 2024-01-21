@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "mocha --timeout 30000 --require ts-node/register test/**.spec.ts",
-    "dev": "ts-node-dev -r dotenv/config src/app.ts"
+    "start": "ts-node-dev -r dotenv/config src/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +29,7 @@
     "nyc": "^15.1.0",
     "sinon": "^16.0.0",
     "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.6"
   }
 }
