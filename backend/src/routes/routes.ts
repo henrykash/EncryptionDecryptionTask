@@ -9,7 +9,7 @@ router.get("/", (req: any, res: any) => {
   });
 });
 
-router.post("/generateAndSignMessage", async (req: Request, res: Response) => {
+router.post("/encrypt", async (req: Request, res: Response) => {
   try {
     const { message } = req.body;
 
@@ -30,7 +30,7 @@ router.post("/generateAndSignMessage", async (req: Request, res: Response) => {
   }
 });
 
-router.post("/verifyMessage", async (req: Request, res: Response) => {
+router.post("/decrypt", async (req: Request, res: Response) => {
   try {
     const { encryptedMessage, evmAddress } = req.body;
     const decryptedMessage = await decryptMessage(encryptedMessage, evmAddress);
